@@ -1,0 +1,27 @@
+{
+  "name": "cyg2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:tag:Regression": "cypress run --env grepTags=\"@regression\"",
+    "test:tag:smokeAndRegression": "cypress run --env grepTags=\"@smoke+@regression \"",
+    "test:tag:smokeOrRegression": "cypress run --env grepTags=\"@smoke @regression \"",
+    "test:tag:sprint": "cypress run --env grep=\"Sprint\"",
+    "test:tag:invertRegression": "cypress run --env grepTags=\"-@regression \"",
+    "test:tag:invertSmoke":"cypress run --env grepTags=\"-@smoke \" --spec \"cypress/integration/groups/tc_group_2.spec.js\"",
+    "test:tag:Sanity": "cypress run --env grepTags=\"@sanity\""
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "9.7",
+    "npx": "^10.2.2"
+  },
+  "devDependencies": {
+    "cypress-grep": "^2.5.2"
+  }
+}
